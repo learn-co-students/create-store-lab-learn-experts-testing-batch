@@ -61,6 +61,6 @@ describe('UserInput', () => {
     hometownInput.simulate('change', { target: { value: 'philly' } })
     let form = wrapper.find('form').first()
     form.simulate('submit',  { preventDefault() {} })
-    expect(store.getState()).to.deep.equal({users: [{userName: 'Bob', hometown: 'philly'}]})
+    expect(store.getState()).to.deep.equal({users: [{name: 'Bob', hometown: 'philly'}]})
   })
 });
